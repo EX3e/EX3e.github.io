@@ -1,0 +1,355 @@
+/* @import './fonts.css';
+@import './buttonsanims.css'; */
+@import './textanims.css';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+
+.message-box {
+  width: 80%;
+  height: 90%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(235, 230, 230);
+  border: 1px solid rgb(42, 137, 73);
+  z-index: 2000;
+  overflow-y: auto;
+  /* 내부만 스크롤 가능하게 */
+  overflow-x: hidden;
+  /* 가로 스크롤 방지 */
+  border-radius: 20px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: fixed;
+  padding: 1rem;
+  top: 10%;
+  left: 89%;
+  margin: 1rem;
+  color: rgb(42, 137, 73);
+  font-size: 4rem;
+
+}
+
+.B .texts {
+  white-space: pre-wrap;
+  /* 줄바꿈과 공백 유지 */
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 1rem;
+  align-content: center;
+  color: rgb(87, 87, 87);
+  text-indent: 0.2rem;
+  user-select: none;
+  will-change: opacity;
+  animation: fadein 0.8s;
+}
+
+
+
+.B button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: rgb(42, 137, 73);
+  font-family: 'Cute Font', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  border-color: rgb(42, 137, 73);
+  border-width: 2px;
+  position: sticky;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  max-height: 13%;
+  align-content: center;
+  min-height: 2.5rem;
+  animation: fadein 0.4s;
+}
+
+.B button:hover {
+  background-color: rgba(255, 255, 255, 0.853);
+  transition: background-color transform 0.6s;
+  color: rgb(42, 137, 73);
+  transform: scale(1.02);
+}
+
+.B button:not(:hover) {
+  background-color: rgb(42, 137, 73);
+  transition: background-color 0.3s;
+}
+
+
+.A {
+  padding: 1rem 1rem 1rem 0;
+  will-change: opacity;
+  animation: fadein 0.4s;
+}
+
+.B {
+  padding: 1rem 1rem 1rem 0;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+
+.close-btn:hover {
+  transform: translate(-50%, -50%) scale(1.3);
+  transition: transform 0.2s ease;
+}
+
+.close-btn:not(:hover) {
+  transform: translate(-50%, -50%) scale(1.0) rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.info-inner-box {
+  position: relative;
+  width: 80%;
+  height: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.textpart .titlepart {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-family: "Jua", sans-serif;
+  font-size: 1.3rem;
+  color: gray;
+  padding-left: 0.4rem;
+  user-select: none;
+}
+
+.textpart .infopart {
+  display: flex;
+  font-family: 'Cute-Font', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  user-select: none;
+}
+
+.textpart .infopart .line {
+  width: 40%;
+  height: 0.1rem;
+  margin: auto;
+  background-color: rgb(128, 199, 201);
+  align-content: center;
+}
+
+.textpart .type {
+  font-size: 0.9em;
+  text-align: right;
+  color: rgb(87, 87, 87);
+  padding-right: 0.4rem;
+  user-select: none;
+
+}
+
+.textpart .date {
+  font-size: 0.9em;
+  text-align: left;
+  color: rgb(87, 87, 87);
+  padding-left: 0.4rem;
+  user-select: none;
+}
+
+.info-inner-box img {
+  max-width: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  
+  .B .texts {
+    white-space: pre-wrap;
+    /* 줄바꿈과 공백 유지 */
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 0.9rem;
+    align-content: center;
+    color: rgb(87, 87, 87);
+  }
+
+  .B {
+    padding: 1rem 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+
+  .textpart .type {
+    font-size: 0.8em;
+    text-align: right;
+    color: rgb(87, 87, 87);
+  }
+
+  .textpart .date {
+    font-size: 0.8em;
+    text-align: left;
+    color: rgb(87, 87, 87);
+  }
+
+  .textpart .titlepart {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: "Jua", sans-serif;
+    font-size: 1.3rem;
+    color: rgb(87, 87, 87);
+  }
+
+  .textpart .infopart .line {
+    width: 30%;
+    height: 0.1rem;
+    margin: auto;
+    background-color: rgb(128, 199, 201);
+    align-content: center;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    padding: 1rem;
+    top: 4%;
+    left: 90%;
+    margin: 1.3rem;
+    color: rgb(42, 137, 73);
+    font-size: 4rem;
+    
+  }
+
+  .B button {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    padding: 1rem;
+    top: 5%;
+    left: 86%;
+    margin: 1rem;
+    transform: translate(-50%, -50%);
+    color: rgb(42, 137, 73);
+    font-size: 4rem;
+
+  }
+
+  .textpart .type {
+    font-size: 0.7em;
+    text-align: right;
+    color: rgb(87, 87, 87);
+  }
+
+  .textpart .date {
+    font-size: 0.7em;
+    text-align: left;
+    color: rgb(87, 87, 87);
+  }
+  .textpart .titlepart {
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    font-family: "Jua", sans-serif;
+    font-size: 1.3rem;
+    color: rgb(87, 87, 87);
+  }
+
+  .B .texts {
+    white-space: pre-wrap;
+    /* 줄바꿈과 공백 유지 */
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-size: 0.8rem;
+    align-content: top;
+    color: rgb(87, 87, 87);
+  }
+
+  .info-inner-box {
+    position: relative;
+    width: 80%;
+    height: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-columns: 1fr;
+
+  }
+
+  .A {
+    display: grid;
+  }
+
+  .textpart .infopart .line {
+    width: 30%;
+    height: 0.1rem;
+    margin: auto;
+    background-color: rgb(128, 199, 201);
+    align-content: center;
+  }
+
+  .textpart .titlepart {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: "Jua", sans-serif;
+    font-size: 1.2rem;
+    color: rgb(87, 87, 87);
+  }
+
+  .info-inner-box img {
+    max-width: 600px;
+    width: 60%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .B {
+    padding: 0rem 0rem 0rem 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 364px) {
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    padding: 1rem;
+    top: 5%;
+    left: 86%;
+    margin: 0.4rem;
+    padding-right: 10%;
+    transform: translate(-50%, -50%);
+    color: rgb(42, 137, 73);
+    font-size: 4rem;
+
+  }
+}

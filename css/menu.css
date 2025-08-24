@@ -1,0 +1,66 @@
+/* @import './fonts.css'; */
+.menu{
+  background-color: transparent;
+  font-family: IBM Plex Sans KR, sans-serif;
+  font-size: 1.6rem;
+  align-content: center;
+  font-weight: 400;
+  z-index: 0;
+}
+.menu a {
+  position: relative;    /* ::after 위치 기준 */
+  display: block;        /* 한 줄씩 배치 */
+  text-decoration: none;
+  padding: 12px;
+  color: rgb(42, 137, 73);
+  
+  text-shadow:
+      0 0 7px rgb(235,230, 230), 
+      /* 색맹분들을 고려한 그림자 색 */
+      0 0 10px rgb(235,230, 230),
+      0 0 21px rgb(235,230, 230),
+      0 0 42px rgb(15,250, 250),
+      0 0 82px rgb(15,250, 250),
+      0 0 92px rgb(15,250, 250),
+      0 0 102px rgb(15,250, 250),
+      0 0 151px rgb(15,250, 250);
+}
+
+/* 밑줄 애니메이션 */
+.menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;           /* padding과 간격 맞춰서 밑줄 위치 조정 */
+  width: 100%;
+  height: 4px;
+  background-color: rgb(128, 199, 201);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.18s ease;
+}
+
+/* 선택된 메뉴 (항상 밑줄 표시) */
+.menu a.selected::after {
+  transform: scaleX(1);   /* 밑줄 항상 보이게 */
+}
+
+.menu a span.selected::after {
+  padding-left: 0.5rem;
+}
+.menu a:active{
+  background-color: rgba(250, 235, 215, 0.219);
+}
+.menu a:hover {
+  background-color: rgba(255, 232, 202, 0.512);
+
+}
+.menu a:hover::after {
+  transform: scaleX(1);
+  
+}
+@media (max-width: 1100px) {
+  .menu {
+    display: none; /* 모바일에서는 숨김 */
+  }
+}
