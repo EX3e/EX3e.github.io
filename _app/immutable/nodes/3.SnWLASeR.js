@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import"../chunks/Ci0D1p30.js";import{f as t,h as r,a as e,$ as m}from"../chunks/GRekcwJO.js";var c=t('<div class="contact-area"><h2>ex3exp@gmail.com</h2></div>');function d(a){var o=c();r(i=>{m.title="Contact | EX3"}),e(a,o)}export{d as component};

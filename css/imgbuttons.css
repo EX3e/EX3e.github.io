@@ -1,0 +1,28 @@
+@import './buttonsanims.css';
+
+.img-buttons {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(3, 24%);
+    gap: 5%;
+    font-weight: 400;
+    z-index: 1000;
+    align-content: start;
+    will-change: opacity;
+    animation: fadein 0.3s;
+  }
+
+@media (max-width: 1100px) {
+  .img-buttons {
+    grid-template-columns: repeat(2, 40%);
+    gap: 10%;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 764px) {
+  .img-buttons {
+    grid-template-columns: repeat(2, 50%);
+    gap: 10px;
+  }
+}

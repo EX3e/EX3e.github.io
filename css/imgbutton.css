@@ -1,0 +1,196 @@
+/* @import './fonts.css'; */
+.img-button {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: auto;
+    background-color: transparent;
+    animation: fadein 0.3s;
+}
+
+
+.img-button img {
+    width: 100%;
+    background-color: rgb(235, 230, 230);
+    animation: fadein 0.3s;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+}
+
+.img-button button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+}
+
+.img-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+.img-button:not(:hover) {
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+
+.img-button .textpart {
+    padding: 0.5rem;
+}
+
+.img-button .textpart .title {
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    text-align: left;
+    color: rgb(42, 137, 73);
+    text-shadow:
+        0 0 7px rgb(235, 230, 230),
+        /* 색맹분들을 고려한 그림자 색 */
+        0 0 10px rgb(235, 230, 230),
+        0 0 10px rgb(235, 230, 230),
+        0 0 42px rgb(15, 250, 250),
+        0 0 151px rgb(15, 250, 250);
+}
+
+.img-button .textpart .titlepart {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.img-button .textpart .infopart {
+    display: flex;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.img-button .textpart .infopart .line {
+    width: 35%;
+    height: 0.1rem;
+    margin: auto;
+    background-color: rgb(128, 199, 201);
+    align-content: center;
+}
+
+.img-button .textpart .type {
+    font-size: 0.9em;
+    text-align: right;
+    color: rgb(87, 87, 87);
+
+}
+
+.img-button .textpart .date {
+    font-size: 0.9em;
+    text-align: left;
+    color: rgb(87, 87, 87);
+}
+
+@media (max-width: 1100px) {
+    .img-buttons {
+        padding-left: 10%;
+    }
+
+    .img-button:hover {
+        transform: none;
+        transition: none;
+    }
+
+    .img-button .textpart .infopart .line {
+        width: 30%;
+        height: 0.1rem;
+        margin: auto;
+        background-color: rgb(128, 199, 201);
+        align-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-button .textpart .infopart .line {
+        width: 20%;
+        height: 0.1rem;
+        margin: auto;
+        background-color: rgb(128, 199, 201);
+        align-content: center;
+    }
+
+    .img-button .textpart .type {
+        font-size: 0.8em;
+        text-align: right;
+        color: rgb(87, 87, 87);
+
+    }
+
+    .img-button .textpart .date {
+        font-size: 0.8em;
+        text-align: left;
+        color: rgb(87, 87, 87);
+    }
+
+    .img-button .textpart .title {
+        font-family: "Jua", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.2rem;
+        text-align: left;
+        color: rgb(42, 137, 73);
+        text-shadow:
+            0 0 7px rgb(235, 230, 230),
+            /* 색맹분들을 고려한 그림자 색 */
+            0 0 10px rgb(235, 230, 230),
+            0 0 10px rgb(235, 230, 230),
+            0 0 42px rgb(15, 250, 250),
+            0 0 151px rgb(15, 250, 250);
+    }
+}
+
+
+@media (max-width: 500px) {
+    .img-buttons {
+        padding-left: 2%;
+        padding-right: 5%;
+    }
+
+    .img-button .textpart .infopart .line {
+        width: 5%;
+        height: 0.1rem;
+        margin: auto;
+        background-color: rgb(128, 199, 201);
+        align-content: center;
+    }
+
+    .img-button .textpart .type {
+        font-size: 0.7em;
+        text-align: right;
+        color: gray;
+
+    }
+
+    .img-button .textpart .title {
+        font-family: "Jua", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.2rem;
+        text-align: left;
+        color: rgb(42, 137, 73);
+        text-shadow:
+            0 0 7px rgb(235, 230, 230),
+            /* 색맹분들을 고려한 그림자 색 */
+            0 0 10px rgb(235, 230, 230),
+            0 0 10px rgb(235, 230, 230),
+            0 0 42px rgb(15, 250, 250),
+            0 0 151px rgb(15, 250, 250);
+    }
+
+    .img-button .textpart .date {
+        font-size: 0.7em;
+        text-align: left;
+        color: rgb(87, 87, 87);
+    }
+}
